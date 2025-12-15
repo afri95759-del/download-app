@@ -1,98 +1,186 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تحميل التطبيق</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هادان | التطبيقات الإسلامية</title>
 
-<style>
-body{
-    font-family: Tahoma, Arial, sans-serif;
-    background:#0f766e;
-    margin:0;
-    color:white;
-    text-align:center;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.box{
-    padding:30px 15px;
-}
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+        body{background:#f8f5f0;color:#333;line-height:1.6}
+        a{text-decoration:none;color:inherit}
 
-/* إطار الأيقونة */
-.app-icon{
-    width:120px;
-    height:120px;
-    background:white;
-    border-radius:25px; /* ✅ تم التصحيح */
-    margin:20px auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-}
+        header{
+            background:linear-gradient(135deg,#0d3b1e,#1a5c2f);
+            color:#fff;padding:1.5rem 2rem;
+            position:sticky;top:0;z-index:1000
+        }
+        .header-container{
+            max-width:1200px;margin:auto;
+            display:flex;justify-content:space-between;align-items:center
+        }
+        .logo{font-size:2rem;font-weight:700}
+        .logo i,.logo span{color:#d4af37}
+        nav ul{display:flex;list-style:none;gap:2rem}
+        nav a:hover{color:#d4af37}
 
-/* الصورة */
-.app-icon img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+        .hero{
+            background:linear-gradient(rgba(13,59,30,.85),rgba(13,59,30,.9)),
+            url('https://images.unsplash.com/photo-1543332143-c6a69f5baa4b');
+            background-size:cover;background-position:center;
+            color:#fff;text-align:center;padding:6rem 2rem
+        }
+        .hero h1{font-size:3rem;margin-bottom:1rem}
+        .cta-button{
+            background:#d4af37;color:#0d3b1e;
+            padding:1rem 2.5rem;border-radius:50px;
+            font-weight:700;display:inline-block
+        }
 
-.btn{
-    display:inline-block;
-    background:#22c55e;
-    color:#022c22;
-    padding:15px 25px;
-    font-size:18px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:bold;
-}
+        .apps-section{max-width:1200px;margin:4rem auto;padding:0 2rem}
+        .section-title{text-align:center;font-size:2.5rem;color:#0d3b1e}
+        .apps-container{display:flex;flex-wrap:wrap;gap:3rem;justify-content:center}
 
-.desc{
-    margin-top:15px;
-    font-size:16px;
-    line-height:1.8;
-}
+        .app-card{
+            background:#fff;border-radius:20px;
+            max-width:550px;width:100%;
+            box-shadow:0 10px 30px rgba(0,0,0,.08);
+            overflow:hidden
+        }
+        .card-header{
+            background:linear-gradient(135deg,#1a5c2f,#0d3b1e);
+            color:#fff;text-align:center;padding:2rem
+        }
 
-.footer{
-    margin-top:30px;
-    font-size:13px;
-    opacity:0.8;
-}
-</style>
+        /* أيقونات التطبيقات */
+        .app-icon{
+            width:100px;
+            height:100px;
+            margin:0 auto 1rem;
+            background:#fff;
+            border-radius:22px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            box-shadow:0 6px 12px rgba(0,0,0,.1);
+            overflow:hidden
+        }
+        .app-icon img{
+            width:100%;
+            height:100%;
+            object-fit:cover
+        }
+
+        .card-body{padding:2rem}
+        .features li{padding-right:1.5rem;position:relative}
+        .features li::before{
+            content:"✓";position:absolute;right:0;color:#1a5c2f
+        }
+        .download-button{
+            display:block;text-align:center;
+            background:#0d3b1e;color:#fff;
+            padding:1rem;border-radius:12px;font-weight:700
+        }
+        .download-button:hover{background:#1a5c2f}
+
+        footer{background:#0a2916;color:#bbb;padding:3rem 2rem}
+        .footer-content{
+            max-width:1200px;margin:auto;
+            display:flex;flex-wrap:wrap;gap:2rem
+        }
+        .copyright{text-align:center;margin-top:2rem;color:#888}
+    </style>
 </head>
 
 <body>
 
-<div class="box">
-
-    <!-- أيقونة التطبيق -->
-    <div class="app-icon">
-        <img src="icon.png" alt="أيقونة التطبيق">
+<header>
+    <div class="header-container">
+        <div class="logo"><i class="fas fa-mosque"></i> <span>هادان</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#apps">التطبيقات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <h1>تلاوات عبد الباسط عبد الصمد</h1>
+<section id="home" class="hero">
+    <h1>هداية في راحة يدك</h1>
+    <p>تطبيقات إسلامية نافعة تخدم المسلم والداعية</p>
+    <a href="#apps" class="cta-button">عرض التطبيقات</a>
+</section>
 
-    <p class="desc">
-        استمع إلى تلاوات  
-        الشيخ عبد الباسط عبد الصمد رحمه الله  
-        بصوت خاشع وجودة عالية  
-        وعيش روحانية القرآن الكريم 🤍📖
-    </p>
+<section id="apps" class="apps-section">
+    <h2 class="section-title">تطبيقاتنا</h2>
 
-    <!-- زر التحميل (MEGA) -->
-    <a class="btn"
-       href="https://mega.nz/file/bpIgGBwJ#xrOPSTlfSHPSSM0aFHX9VQxi3Lu_z8RP5WaJA1_R1gg"
-       target="_blank">
-        ⬇️ تحميل التطبيق (APK)
-    </a>
+    <div class="apps-container">
 
-    <div class="footer">
-        جميع الحقوق محفوظة © 2025
+        <!-- تطبيق الرسالة -->
+        <div class="app-card">
+            <div class="card-header">
+                <div class="app-icon">
+                    <img src="images/risala.png" alt="أيقونة تطبيق الرسالة">
+                </div>
+                <h3>تطبيق الرسالة</h3>
+                <p>الدعوة إلى الإسلام</p>
+            </div>
+            <div class="card-body">
+                <ul class="features">
+                    <li>محتوى دعوي منظم</li>
+                    <li>مناسب لغير المسلمين</li>
+                    <li>واجهة بسيطة</li>
+                </ul>
+
+                <a class="download-button"
+                   href="https://mega.nz/file/u4QRnLrZ#QPgFydRkZgmeh6N-2ntsVaduDBo086QoIDY7xiaj9C0"
+                   target="_blank" rel="noopener">
+                   <i class="fas fa-download"></i> تحميل تطبيق الرسالة
+                </a>
+            </div>
+        </div>
+
+        <!-- تطبيق القرآن -->
+        <div class="app-card">
+            <div class="card-header">
+                <div class="app-icon">
+                    <img src="images/quran.png" alt="أيقونة تطبيق القرآن الكريم">
+                </div>
+                <h3>القرآن الكريم</h3>
+                <p>عبد الباسط عبد الصمد</p>
+            </div>
+            <div class="card-body">
+                <ul class="features">
+                    <li>تلاوة كاملة</li>
+                    <li>صوت نقي</li>
+                    <li>تشغيل في الخلفية</li>
+                </ul>
+
+                <a class="download-button"
+                   href="https://mega.nz/file/bpIgGBwJ#xrOPSTlfSHPSSM0aFHX9VQxi3Lu_z8RP5WaJA1_R1gg"
+                   target="_blank" rel="noopener">
+                   <i class="fas fa-download"></i> تحميل تطبيق القرآن
+                </a>
+            </div>
+        </div>
+
     </div>
+</section>
 
-</div>
+<footer id="contact">
+    <div class="footer-content">
+        <p>© <span id="year"></span> هادان – جميع الحقوق محفوظة</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
-</html>
+        </html>
